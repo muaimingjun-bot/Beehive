@@ -1,0 +1,270 @@
+<svg viewBox="0 0 1600 1050" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1890ff"/></marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#722ed1"/></marker>
+    <marker id="arr-black" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/></marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52c41a"/></marker>
+
+    <g id="worker-node">
+      <rect x="0" y="0" width="180" height="150" rx="8" fill="#fff" stroke="#52c41a" stroke-width="2"/>
+      <rect x="0" y="0" width="180" height="30" rx="8" fill="#f6ffed" stroke="none"/>
+      <path d="M 0 30 H 180" stroke="#52c41a" stroke-width="2"/>
+      <text x="10" y="20" font-size="14" font-weight="bold" fill="#237804">worker节点 (Docker) 🐳</text>
+      
+      <text x="10" y="50" font-size="12" fill="#333">🤖 Agent Harness</text>
+      <path d="M 10 58 H 170" stroke="#f0f0f0" stroke-width="1"/>
+      <text x="10" y="75" font-size="12" fill="#333">🧠 模型 (Claude Code / Codex / pi)</text>
+      <path d="M 10 83 H 170" stroke="#f0f0f0" stroke-width="1"/>
+      <text x="10" y="100" font-size="12" fill="#333">⚒️ Skill</text>
+      <path d="M 10 108 H 170" stroke="#f0f0f0" stroke-width="1"/>
+      <text x="10" y="125" font-size="12" fill="#333">🕒 Session恢复点</text>
+      <path d="M 10 133 H 170" stroke="#f0f0f0" stroke-width="1"/>
+      <text x="10" y="150" font-size="12" fill="#333">🔑 Git SSH Key</text>
+      <path d="M 10 158 H 170" stroke="#f0f0f0" stroke-width="1"/>
+      <text x="10" y="175" font-size="12" fill="#333">📁 工作目录挂载</text>
+      <rect x="0" y="0" width="180" height="190" rx="8" fill="none" stroke="#52c41a" stroke-width="2"/>
+    </g>
+
+    <g id="flow-node-rd">
+      <rect x="0" y="0" width="120" height="40" rx="20" fill="#fff" stroke="#fa8c16" stroke-width="2"/>
+    </g>
+    <g id="flow-node-research">
+      <rect x="0" y="0" width="120" height="40" rx="20" fill="#fff" stroke="#13c2c2" stroke-width="2"/>
+    </g>
+    <g id="circle-node">
+      <circle cx="0" cy="0" r="10" fill="#fff" stroke="#333" stroke-width="2"/>
+      <circle cx="0" cy="0" r="4" fill="#333"/>
+    </g>
+  </defs>
+
+  <rect width="1600" height="1050" fill="#ffffff" />
+
+  <g transform="translate(30, 30)">
+    <rect width="140" height="180" rx="8" fill="#fff" stroke="#d9d9d9" stroke-width="1.5"/>
+    <text x="15" y="25" font-size="14" font-weight="bold">图例</text>
+    <rect x="15" y="40" width="20" height="14" fill="#e6f7ff" stroke="#1890ff" stroke-width="1.5"/> <text x="45" y="52" font-size="14">主控层 (编排)</text>
+    <rect x="15" y="70" width="20" height="14" fill="#f9f0ff" stroke="#722ed1" stroke-width="1.5"/> <text x="45" y="82" font-size="14">定义层 (DAG)</text>
+    <rect x="15" y="100" width="20" height="14" fill="#f6ffed" stroke="#52c41a" stroke-width="1.5"/> <text x="45" y="112" font-size="14">执行层 (Worker)</text>
+    <rect x="15" y="130" width="20" height="14" fill="#fff7e6" stroke="#fa8c16" stroke-width="1.5"/> <text x="45" y="142" font-size="14">软件研发流程</text>
+    <rect x="15" y="160" width="20" height="14" fill="#e6fffb" stroke="#13c2c2" stroke-width="1.5"/> <text x="45" y="172" font-size="14">Deep Research流程</text>
+  </g>
+
+  <g transform="translate(450, 30)">
+    <rect width="320" height="160" rx="8" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+    <rect x="110" y="20" width="100" height="80" rx="4" fill="#1890ff"/>
+    <line x1="120" y1="35" x2="190" y2="35" stroke="#fff" stroke-width="4"/>
+    <line x1="120" y1="55" x2="190" y2="55" stroke="#fff" stroke-width="4"/>
+    <line x1="120" y1="75" x2="190" y2="75" stroke="#fff" stroke-width="4"/>
+    <text x="160" y="135" font-size="20" font-weight="bold" fill="#0050b3" text-anchor="middle">主控服务器</text>
+  </g>
+  <g transform="translate(790, 60)" font-size="14" fill="#0050b3">
+    <text x="0" y="0">• DAG 调度与编排</text>
+    <text x="0" y="25">• Worker 生命周期管理</text>
+    <text x="0" y="50">• 状态追踪与重试</text>
+    <text x="0" y="75">• 日志与指标监控</text>
+  </g>
+
+  <g transform="translate(1000, 30)">
+    <rect width="360" height="160" rx="8" fill="#f9f0ff" stroke="#722ed1" stroke-width="2"/>
+    <text x="180" y="30" font-size="18" font-weight="bold" fill="#531dab" text-anchor="middle">任务图 (DAG) / 业务流程定义</text>
+    <g transform="translate(20, 60)">
+      <circle cx="20" cy="30" r="12" fill="#722ed1"/>
+      <circle cx="70" cy="10" r="12" fill="#722ed1"/>
+      <circle cx="70" cy="50" r="12" fill="#722ed1"/>
+      <circle cx="120" cy="30" r="12" fill="#722ed1"/>
+      <path d="M 32 25 L 58 15" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+      <path d="M 32 35 L 58 45" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+      <path d="M 82 15 L 108 25" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+      <path d="M 82 45 L 108 35" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    </g>
+    <g transform="translate(160, 65)" font-size="14" fill="#531dab">
+      <text x="0" y="0">• 任务节点与依赖关系</text>
+      <text x="0" y="25">• 并行分支与汇聚</text>
+      <text x="0" y="50">• 失败重试策略</text>
+      <text x="0" y="75">• 资源与配置信息</text>
+    </g>
+  </g>
+
+  <path d="M 770 110 H 1000" stroke="#722ed1" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arr-purple)"/>
+  <path d="M 1000 110 H 770" stroke="#722ed1" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arr-purple)"/>
+  <text x="885" y="100" font-size="14" fill="#722ed1" text-anchor="middle">定义与加载</text>
+
+  <text x="800" y="240" font-size="16" font-weight="bold" fill="#1890ff" text-anchor="middle">创建 / 调度 / 监控 Worker 节点</text>
+  
+  <path d="M 610 190 V 220" stroke="#1890ff" stroke-width="2"/>
+  <path d="M 120 220 H 1150" stroke="#1890ff" stroke-width="2"/>
+  <path d="M 120 220 V 260" stroke="#1890ff" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M 320 220 V 260" stroke="#1890ff" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M 520 220 V 260" stroke="#1890ff" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M 720 220 V 260" stroke="#1890ff" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M 920 220 V 260" stroke="#1890ff" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <path d="M 1150 220 V 260" stroke="#1890ff" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <use href="#worker-node" x="30" y="270"/>
+  <use href="#worker-node" x="230" y="270"/>
+  <use href="#worker-node" x="430" y="270"/>
+  <use href="#worker-node" x="630" y="270"/>
+  <use href="#worker-node" x="830" y="270"/>
+  <use href="#worker-node" x="1060" y="270"/>
+  <text x="1035" y="370" font-size="24" font-weight="bold" fill="#333">...</text>
+
+  <path d="M 210 370 H 230" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arr-black)"/>
+  <path d="M 410 350 L 430 320" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arr-black)"/>
+  <path d="M 410 390 L 430 420" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arr-black)"/>
+  <path d="M 610 320 L 630 350" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arr-black)"/>
+  <path d="M 610 420 L 630 390" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arr-black)"/>
+  <path d="M 810 370 H 830" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arr-black)"/>
+  <path d="M 1010 370 H 1060" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arr-black)"/>
+
+  <g transform="translate(1330, 180)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0050b3">Worker 创建时确定：</text>
+    <text x="0" y="25" font-size="14" fill="#0050b3">✔️ 模型 (Claude Code / Codex / pi)</text>
+    <text x="0" y="50" font-size="14" fill="#0050b3">✔️ Harness (Agent Harness)</text>
+    <text x="0" y="75" font-size="14" fill="#0050b3">✔️ Skill</text>
+    <text x="0" y="100" font-size="14" fill="#0050b3">✔️ 从哪个 Session 什么位置恢复</text>
+  </g>
+  <path d="M 1320 180 Q 1200 180 1150 260" stroke="#1890ff" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arr-blue)" fill="none"/>
+
+  <g transform="translate(1300, 310)">
+    <rect width="100" height="100" rx="8" fill="none" stroke="#52c41a" stroke-width="2" stroke-dasharray="6"/>
+    <text x="50" y="45" font-size="24" text-anchor="middle">🔄</text>
+    <text x="50" y="70" font-size="14" font-weight="bold" fill="#237804" text-anchor="middle">随时</text>
+    <text x="50" y="90" font-size="14" font-weight="bold" fill="#237804" text-anchor="middle">销毁 / 重建</text>
+  </g>
+  <path d="M 1240 370 H 1300" stroke="#52c41a" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <g transform="translate(30, 520)">
+    <rect width="750" height="320" rx="8" fill="none" stroke="#fa8c16" stroke-width="2"/>
+    <rect x="20" y="20" width="30" height="30" rx="4" fill="#fa8c16"/>
+    <text x="35" y="40" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">&lt;/&gt;</text>
+    <text x="60" y="42" font-size="20" font-weight="bold" fill="#d4380d">1) 软件研发流程 (示例)</text>
+
+    <rect x="70" y="80" width="160" height="220" rx="8" fill="none" stroke="#fa8c16" stroke-width="1.5" stroke-dasharray="4"/>
+    <text x="150" y="100" font-size="14" fill="#d4380d" text-anchor="middle">并发：编码节点</text>
+    
+    <rect x="260" y="120" width="160" height="150" rx="8" fill="none" stroke="#fa8c16" stroke-width="1.5" stroke-dasharray="4"/>
+    <text x="340" y="140" font-size="14" fill="#d4380d" text-anchor="middle">并发：Review节点</text>
+    
+    <rect x="450" y="80" width="160" height="220" rx="8" fill="none" stroke="#fa8c16" stroke-width="1.5" stroke-dasharray="4"/>
+    <text x="530" y="100" font-size="14" fill="#d4380d" text-anchor="middle">并发：测试节点</text>
+
+    <use href="#circle-node" x="30" y="190"/>
+    
+    <use href="#flow-node-rd" x="90" y="120"/> <text x="150" y="145" font-size="14" text-anchor="middle">编码 (A)</text>
+    <use href="#flow-node-rd" x="90" y="170"/> <text x="150" y="195" font-size="14" text-anchor="middle">编码 (B)</text>
+    <use href="#flow-node-rd" x="90" y="220"/> <text x="150" y="245" font-size="14" text-anchor="middle">编码 (C)</text>
+
+    <use href="#flow-node-rd" x="280" y="145"/> <text x="340" y="170" font-size="14" text-anchor="middle">Review (A)</text>
+    <use href="#flow-node-rd" x="280" y="195"/> <text x="340" y="220" font-size="14" text-anchor="middle">Review (B)</text>
+
+    <use href="#flow-node-rd" x="470" y="120"/> <text x="530" y="145" font-size="14" text-anchor="middle">测试 (单元)</text>
+    <use href="#flow-node-rd" x="470" y="170"/> <text x="530" y="195" font-size="14" text-anchor="middle">测试 (集成)</text>
+    <use href="#flow-node-rd" x="470" y="220"/> <text x="530" y="245" font-size="14" text-anchor="middle">测试 (E2E)</text>
+
+    <use href="#flow-node-rd" x="620" y="170" width="100"/>
+    <text x="680" y="190" font-size="14" text-anchor="middle">汇总 / 合并</text>
+    <text x="680" y="205" font-size="10" fill="#666" text-anchor="middle">(生成构建产物)</text>
+    <use href="#circle-node" x="730" y="190"/>
+
+    <path d="M 40 190 L 90 140" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 40 190 L 90 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 40 190 L 90 240" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+
+    <path d="M 210 140 L 280 165" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 210 140 L 280 215" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 210 190 L 280 165" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 210 190 L 280 215" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 210 240 L 280 165" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 210 240 L 280 215" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+
+    <path d="M 400 165 L 470 140" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 400 165 L 470 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 400 165 L 470 240" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 400 215 L 470 140" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 400 215 L 470 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 400 215 L 470 240" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+
+    <path d="M 590 140 L 620 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 590 190 L 620 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 590 240 L 620 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+
+    <path d="M 680 170 L 720 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+  </g>
+
+  <g transform="translate(800, 520)">
+    <rect width="770" height="320" rx="8" fill="none" stroke="#13c2c2" stroke-width="2"/>
+    <circle cx="35" cy="35" r="15" fill="none" stroke="#13c2c2" stroke-width="2"/>
+    <path d="M 42 42 L 50 50" stroke="#13c2c2" stroke-width="2"/>
+    <text x="60" y="42" font-size="20" font-weight="bold" fill="#08979c">2) Deep Research流程 (示例)</text>
+
+    <rect x="50" y="80" width="180" height="220" rx="8" fill="none" stroke="#13c2c2" stroke-width="1.5" stroke-dasharray="4"/>
+    <text x="140" y="100" font-size="14" fill="#08979c" text-anchor="middle">并发：搜索节点</text>
+    
+    <rect x="300" y="80" width="180" height="220" rx="8" fill="none" stroke="#13c2c2" stroke-width="1.5" stroke-dasharray="4"/>
+    <text x="390" y="100" font-size="14" fill="#08979c" text-anchor="middle">并发：写作整理节点</text>
+    
+    <rect x="550" y="120" width="160" height="150" rx="8" fill="none" stroke="#13c2c2" stroke-width="1.5" stroke-dasharray="4"/>
+    <text x="630" y="140" font-size="14" fill="#08979c" text-anchor="middle">报告节点</text>
+
+    <use href="#circle-node" x="20" y="190"/>
+    
+    <use href="#flow-node-research" x="80" y="120"/> <text x="140" y="145" font-size="14" text-anchor="middle">搜索 (主题A)</text>
+    <use href="#flow-node-research" x="80" y="170"/> <text x="140" y="195" font-size="14" text-anchor="middle">搜索 (主题B)</text>
+    <use href="#flow-node-research" x="80" y="220"/> <text x="140" y="245" font-size="14" text-anchor="middle">搜索 (主题C)</text>
+
+    <use href="#flow-node-research" x="330" y="120"/> <text x="390" y="145" font-size="14" text-anchor="middle">写作整理 (A)</text>
+    <use href="#flow-node-research" x="330" y="170"/> <text x="390" y="195" font-size="14" text-anchor="middle">写作整理 (B)</text>
+    <use href="#flow-node-research" x="330" y="220"/> <text x="390" y="245" font-size="14" text-anchor="middle">写作整理 (C)</text>
+
+    <use href="#flow-node-research" x="570" y="170"/> 
+    <text x="630" y="190" font-size="14" text-anchor="middle">研究报告</text>
+    <text x="630" y="205" font-size="10" fill="#666" text-anchor="middle">(汇总与输出)</text>
+    <use href="#circle-node" x="740" y="190"/>
+
+    <path d="M 30 190 L 80 140" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 30 190 L 80 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 30 190 L 80 240" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+
+    <path d="M 200 140 L 330 140" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 200 140 L 330 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    
+    <path d="M 200 190 L 330 140" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 200 190 L 330 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 200 190 L 330 240" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    
+    <path d="M 200 240 L 330 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 200 240 L 330 240" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+
+    <path d="M 450 140 L 570 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 450 190 L 570 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+    <path d="M 450 240 L 570 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+
+    <path d="M 690 190 L 730 190" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+  </g>
+
+  <g transform="translate(30, 870)">
+    <rect width="1540" height="70" rx="35" fill="#fff" stroke="#d9d9d9" stroke-width="1"/>
+    <g font-size="12" fill="#333" transform="translate(30, 40)">
+      <text x="0" y="0">🐳 Docker 容器</text> <text x="0" y="15" fill="#666">(临时 Worker)</text>
+      <text x="130" y="0">🤖 Agent Harness</text> <text x="130" y="15" fill="#666">(执行框架)</text>
+      <text x="270" y="0">🧠 模型</text> <text x="270" y="15" fill="#666">(Claude Code/Codex/pi)</text>
+      <text x="460" y="0">⚒️ Skill</text> <text x="460" y="15" fill="#666">(技能能力)</text>
+      <text x="560" y="0">🕒 Session 恢复点</text> <text x="560" y="15" fill="#666">(断点续做)</text>
+      <text x="710" y="0">🔑 Git SSH Key</text> <text x="710" y="15" fill="#666">(只读 / 认证)</text>
+      <text x="850" y="0">📁 工作目录挂载</text> <text x="850" y="15" fill="#666">(代码与数据)</text>
+      <path d="M 1000 -5 L 1050 -5" stroke="#333" stroke-width="1.5" marker-end="url(#arr-black)"/>
+      <text x="1000" y="15" fill="#666">DAG 依赖关系 (任务依赖)</text>
+      <path d="M 1180 -5 L 1230 -5" stroke="#333" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arr-black)"/>
+      <text x="1180" y="15" fill="#666">并行分支 (可并发)</text>
+      <use href="#circle-node" x="1350" y="-5"/>
+      <text x="1380" y="5">开始 / 结束节点</text> <text x="1380" y="20" fill="#666">(流程边界)</text>
+    </g>
+  </g>
+
+  <g transform="translate(100, 960)">
+    <rect width="1400" height="50" rx="25" fill="#e6f7ff" stroke="#91d5ff" stroke-width="1"/>
+    <text x="700" y="30" font-size="16" fill="#0050b3" text-anchor="middle" font-weight="bold">
+      ℹ️ 主控服务器基于预定义的 DAG 图进行调度；根据任务依赖关系创建临时的 Docker Worker 节点执行任务；任务完成后可销毁 Worker，按需重建以保证环境一致性与资源弹性。
+    </text>
+  </g>
+</svg>
