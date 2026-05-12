@@ -1,0 +1,16 @@
+id: c531802b
+name: LocalMiniDrama 支持导出 MP4
+type: feature
+description: |
+    给 LocalMiniDrama 添加一键导出短剧为 MP4 文件的功能。
+    需要后端生成视频 + 前端下载按钮。
+workers:
+    - coder
+    - reviewer
+project_path: ~/code/LocalMiniDrama
+created_at: 2026-05-12T19:56:23.323813561+08:00
+subtask_ids:
+    - c531802b-1
+    - c531802b-2
+    - c531802b-3
+status: ""

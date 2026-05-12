@@ -1,0 +1,6 @@
+bin/
+store/tasks/pending/*
+store/tasks/running/*
+store/tasks/done/*
+store/results/*
+store/sessions/*
