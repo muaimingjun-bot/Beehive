@@ -466,6 +466,101 @@ API 网关 → CubeMaster+Beehive × N → Cubelet → Worker × N
 
 ---
 
+## Hermes 集成
+
+### 概述
+
+Hermes 是 cc-connect 的定时任务调度系统，负责按周期触发子任务执行。Beehive 提供两种执行模式：
+
+| 模式 | 实现 | 适用场景 |
+|------|------|---------|
+| **内置循环** | `beehive worker` (Go 进程内 while 循环) | 单节点持续运行 |
+| **Hermes 调度** | cc-connect cron 定时调用 `beehive run` | 分布式/多节点调度、精确时间控制 |
+
+### 角色边界
+
+```
+Coordinator (beehive start)          Hermes (cc-connect cron)
+────────────────────────────        ─────────────────────────
+· 轮询 tasks/ 检测新任务              · 定时触发执行命令
+· 拆解 DAG 子任务                    · 管理调度策略 (cron/interval)
+· 管理 Session 事件日志              · 监控执行状态
+· 超时检测与重试决策                  · 失败通知
+
+               │                              │
+               └──────────┬───────────────────┘
+                          │
+                          ▼
+                 ┌─────────────────┐
+                 │  beehive run    │  ← 单次执行一个就绪子任务
+                 │  Dev→Review→Fix │
+                 └─────────────────┘
+```
+
+### 使用方式
+
+**方案 A: 内置循环 (beehive worker)**
+
+```bash
+# 终端1: Coordinator
+./bin/beehive start
+
+# 终端2: Worker 持续循环 (每5秒扫描一次 pending)
+./bin/beehive worker
+```
+
+`beehive worker` 等价于 `while true; do ./bin/beehive run; sleep 5; done`。
+
+**方案 B: Hermes cron 调度**
+
+```bash
+# 每30秒触发一次执行
+cc-connect cron add --cron "*/1 * * * *" \
+  --exec "cd ~/code/Beehive && ./bin/beehive run" \
+  --desc "Beehive Worker 调度" \
+  --session-mode new-per-run
+```
+
+也可以通过 prompt 模式调度：
+
+```bash
+cc-connect cron add --cron "*/1 * * * *" \
+  --prompt "切换到 ~/code/Beehive 目录，执行 ./bin/beehive run 命令完成一个就绪子任务。" \
+  --desc "Beehive Worker 任务执行" \
+  --session-mode new-per-run
+```
+
+### 调度策略建议
+
+| 场景 | 推荐模式 | 间隔 | 理由 |
+|------|---------|------|------|
+| 开发调试 | 手动 `beehive run` | — | 需要观察每步结果 |
+| 单机持续运行 | `beehive worker` | 5s | 最低延迟，零外部依赖 |
+| 多任务并行 | Hermes cron × N | 30s × N | 多进程并发执行不同子任务 |
+| 精确定时 | Hermes cron | 按需 | 支持标准 cron 表达式 |
+
+### Hermes 与 Coordinator 的 Session 交互
+
+```
+Hermes cron 触发 beehive run
+  │
+  ▼
+beehive run 读取 Session 事件日志 → 找到就绪子任务
+  │
+  ▼
+执行 Dev→Review→Fix 流水线 → 写入 Session 事件
+  │
+  ▼
+beehive run 退出 (单次执行)
+  │
+  ▼
+Hermes 下次触发时，从 Session 事件推导最新状态，继续执行
+```
+
+关键点: **Session 外置**使得 Hermes 每次调用的 `beehive run` 都从持久化的事件日志中获取最新状态，无需进程间通信。
+
+---
+
 ## 参考资料
 
 ### 架构设计参考图
